@@ -8,4 +8,4 @@
 
 echo $1 > file_$1.tmp
 cat $2 >> file_$1.tmp
-mv file_$1.txt $2
+mv file_$1.tmp $2
