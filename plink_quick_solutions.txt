@@ -1,0 +1,13 @@
+## Annotate snp into gene regions
+## $1: snp file with at least 3 columns: Chr  pos snp_id. More columns can be included following the required 3 columns.
+## $2: gene annotation file with 4 columns: Chr  begin_pos end_pos gene_name
+## Chr is purely number, do not include the "Chr" as prefix.
+## plink2 --annotate reads a variant-based PLINK report, and writes an annotated version to plink.annot.
+
+plink2 --annotate $1 ranges=$2
+
+
+
+##Bed to ped
+
+plink --bfile filename --recode --tab --out myfavpedfile
