@@ -7,3 +7,4 @@ vector_to_matrix.R            An R function to reshape a vectorized symetric squ
 remove_dup_header.sh          Remove duplicate headers while keeping the header at the first line.
 plink_quick_solutions.txt     List of useful plink2 commands.
 parse_file_name.sh            Get the folder name, file prefix, postfix.
+ssh_without_pw.sh             Example of how to set ssh communication without password.
