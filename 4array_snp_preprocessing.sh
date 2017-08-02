@@ -1,3 +1,11 @@
+##### Find common snps in the raw data before pre-processing.
+d1=read.table("GO_v3.bim",header=F,stringsAsFactors=F)
+d2=read.table("GO_v1.bim",header=F,stringsAsFactors=F)
+d3=read.table("GO_Omni.bim",header=F,stringsAsFactors=F)
+d4=read.table("GO_Quad.bim",header=F,stringsAsFactors=F)
+res=Reduce(intersect, list(d1$V2,d2$V2,d3$V2,d4$V2))
+
+##### Pre-processing
 fn="GO_Quad"
 ~/bin/plink --bfile $fn --geno 0.1 --maf 0.05 --hwe 0.00001 --write-snplist --out $fn
 
