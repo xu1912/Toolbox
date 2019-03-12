@@ -17,3 +17,11 @@ The key fingerprint is:
 Step 2: Copy the public key to remote-host using ssh-copy-id.
 ssh-copy-id appends the keys to the remote-host’s .ssh/authorized_key.
 jsmith@local-host$ ssh-copy-id -i ~/.ssh/id_rsa.pub remote-host
+
+
+Add server name in ~/.ssh/config to use Host instead:
+
+Host dev
+    HostName dev.example.com
+    Port 22000
+    User fooey
