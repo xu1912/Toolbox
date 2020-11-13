@@ -19,9 +19,9 @@ ssh-copy-id appends the keys to the remote-host’s .ssh/authorized_key.
 jsmith@local-host$ ssh-copy-id -i ~/.ssh/id_rsa.pub remote-host
 
 
+Step 3:
 Add server name in ~/.ssh/config to use Host instead:
 
-Host dev
-    HostName dev.example.com
-    Port 22000
+Host <host shortcut>
+    HostName <host full name, like dev.example.com>
     User fooey
